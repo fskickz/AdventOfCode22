@@ -1,4 +1,3 @@
-r = 1
 with open('5/input.txt', 'r') as f:
     crates, instructions = f.read().split('\n\n')
     stacks = {}
@@ -26,9 +25,6 @@ with open('5/input.txt', 'r') as f:
             temp = []
             for i in range(amount):
                 temp.append(stacks[fromcrate].pop())
-            if r < 10:
-                r += 1
-                print(temp)
             for i in range(amount):
                 stacks[tocrate].append(temp[-i-1])
         else:
@@ -39,8 +35,6 @@ with open('5/input.txt', 'r') as f:
         # for i in range(amount):
         #         stacks[tocrate].append(stacks[fromcrate].pop())
 
+
 output = "".join(x[-1] for x in stacks.values())
-
 print(output)
-
-# BNTZFPMMW
